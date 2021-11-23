@@ -6,7 +6,7 @@ const User = require("../models/user") // 실제로 데이터베이스와 비교
 module.exports = (req, res, next) => {
     console.log("여기를 지나쳤어요!!!!"); // 미들웨어가 확실하게 호출이 되었고, 다음 핸들러가 호출되었다는것을 확신할 수 있음.
     const { authorization } = req.headers; // 아무리 프론트엔드에서 대문자로 보내도 여기서는 소문자로 변환됨;
-    // console.log(authorization); // Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTliZDk1YTdlOTA0NWI2YzhlNjIyNWIiLCJpYXQiOjE2Mzc2MDcwMDZ9.0HaMyqR2sfaWCmUe80SnnktBm4pWjvXds0udgmgHtLw
+    // console.log(authorization); // Bearer sasojcopkvposb0poeortiqefjkdjbv0icxbjv0988745u3ri9gjf89vbuy34onvosdfjv834
                                 // 이것을 어떻게 하냐? 이 Bearer와 뒤에있는 데이터를 어떻게 가져옴?? > split 사용하자(공백스플릿)
     const [tokenType, tokenValue] = authorization.split(' ');
     console.log(tokenValue); // 우리가 원하는 값인지 확인해보자
