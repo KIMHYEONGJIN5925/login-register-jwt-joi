@@ -3,7 +3,7 @@ const mongoose = require("mongoose"); // mongoose 모듈 불러오기
 const jwt = require("jsonwebtoken"); // jwt 모듈 불러오기
 const Joi = require('joi');
 const User = require("./models/user");
-const authMiddleware = require("./middlewares/auth-middleware"); // 미들웨어 불러오기
+const authMiddleware = require("../middlewares/auth-middleware"); // 미들웨어 불러오기
 
 mongoose.connect("mongodb://localhost/shopping-demo", {
   useNewUrlParser: true,
